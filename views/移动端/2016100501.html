@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>iOS开发-使用CocoaPods做依赖管理 | 宇后空知</title>
+    <meta name="description" content="学如逆水行舟不进则退">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.7497f63a.css" as="style"><link rel="preload" href="/assets/js/app.47e4b453.js" as="script"><link rel="preload" href="/assets/js/3.fee66f70.js" as="script"><link rel="preload" href="/assets/js/1.2e349676.js" as="script"><link rel="preload" href="/assets/js/22.77c14c77.js" as="script"><link rel="prefetch" href="/assets/js/10.9f90277e.js"><link rel="prefetch" href="/assets/js/11.90e2f34a.js"><link rel="prefetch" href="/assets/js/12.1cb0edf3.js"><link rel="prefetch" href="/assets/js/13.a45ee461.js"><link rel="prefetch" href="/assets/js/14.3a3b5d68.js"><link rel="prefetch" href="/assets/js/15.f911bb44.js"><link rel="prefetch" href="/assets/js/16.df954c08.js"><link rel="prefetch" href="/assets/js/17.bfd77c17.js"><link rel="prefetch" href="/assets/js/18.834739ef.js"><link rel="prefetch" href="/assets/js/19.22ca494c.js"><link rel="prefetch" href="/assets/js/20.a540a5c0.js"><link rel="prefetch" href="/assets/js/21.d98dac6c.js"><link rel="prefetch" href="/assets/js/23.26cd1e0a.js"><link rel="prefetch" href="/assets/js/24.eb47cdc0.js"><link rel="prefetch" href="/assets/js/25.e0831a03.js"><link rel="prefetch" href="/assets/js/26.b1dd00a2.js"><link rel="prefetch" href="/assets/js/27.7e919e91.js"><link rel="prefetch" href="/assets/js/28.f3dd7b79.js"><link rel="prefetch" href="/assets/js/29.121521c8.js"><link rel="prefetch" href="/assets/js/30.3d0c306f.js"><link rel="prefetch" href="/assets/js/31.4b951f68.js"><link rel="prefetch" href="/assets/js/32.a581bfd3.js"><link rel="prefetch" href="/assets/js/33.81cbf059.js"><link rel="prefetch" href="/assets/js/4.83c6b290.js"><link rel="prefetch" href="/assets/js/5.5f60ea70.js"><link rel="prefetch" href="/assets/js/6.922cb1c1.js"><link rel="prefetch" href="/assets/js/7.0a40d726.js"><link rel="prefetch" href="/assets/js/8.7f591466.js"><link rel="prefetch" href="/assets/js/9.428b28b4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7497f63a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-4698c43e><div data-v-4698c43e><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-4698c43e data-v-4698c43e><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-13eca780 data-v-4698c43e data-v-4698c43e><h3 class="title" style="display:none;" data-v-13eca780 data-v-13eca780>宇后空知</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-13eca780 data-v-13eca780><input type="password" value="" data-v-13eca780> <span data-v-13eca780>文章已被锁!</span> <button data-v-13eca780>OK</button></label> <div class="footer" style="display:none;" data-v-13eca780 data-v-13eca780><span data-v-13eca780><i class="iconfont reco-theme" data-v-13eca780></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-13eca780>vuePress-theme-reco</a></span> <span data-v-13eca780><i class="iconfont reco-copyright" data-v-13eca780></i> <a data-v-13eca780><span data-v-13eca780>jyxiaoka</span>
+            
+          <span data-v-13eca780>2019 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-4698c43e><header class="navbar" data-v-4698c43e><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="宇后空知" class="logo"> <span class="site-name">宇后空知</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/移动端/" class="nav-link"><i class="iconfont undefined"></i>
+  移动端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/jyxiaoka" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/52655e189f24" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-4698c43e></div> <aside class="sidebar" data-v-4698c43e><div class="personal-info-wrapper" data-v-6c8ffc9c><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-6c8ffc9c> <h3 class="name" data-v-6c8ffc9c>
+    jyxiaoka
+  </h3> <div class="num" data-v-6c8ffc9c><div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>22</h3> <h6 data-v-6c8ffc9c>文章</h6></div> <div data-v-6c8ffc9c><h3 data-v-6c8ffc9c>7</h3> <h6 data-v-6c8ffc9c>标签</h6></div></div> <hr data-v-6c8ffc9c></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="iconfont undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="iconfont undefined"></i>
+  杂谈
+</a></li><li class="dropdown-item"><!----> <a href="/categories/移动端/" class="nav-link"><i class="iconfont undefined"></i>
+  移动端
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/jyxiaoka" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/52655e189f24" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>iOS开发-使用CocoaPods做依赖管理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#cocoapods简介" class="sidebar-link">CocoaPods简介</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#cocoapods的安装" class="sidebar-link">CocoaPods的安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#cocapods的使用" class="sidebar-link">CocaPods的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#查找第三方库" class="sidebar-link">查找第三方库</a></li><li class="sidebar-sub-header"><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#gitignore的使用" class="sidebar-link">.gitignore的使用</a></li><li class="sidebar-sub-header"><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#为自己的项目创建podspec文件" class="sidebar-link">为自己的项目创建podspec文件</a></li><li class="sidebar-sub-header"><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#不更新podspec" class="sidebar-link">不更新podspec</a></li><li class="sidebar-sub-header"><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#生成第三方库的帮助文档" class="sidebar-link">生成第三方库的帮助文档</a></li></ul></li><li><a href="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html#cocoapods的原理" class="sidebar-link">CocoaPods的原理</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-13eca780 data-v-4698c43e><h3 class="title" style="display:none;" data-v-13eca780 data-v-13eca780>iOS开发-使用CocoaPods做依赖管理</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-13eca780 data-v-13eca780><input type="password" value="" data-v-13eca780> <span data-v-13eca780>文章已被锁!</span> <button data-v-13eca780>OK</button></label> <div class="footer" style="display:none;" data-v-13eca780 data-v-13eca780><span data-v-13eca780><i class="iconfont reco-theme" data-v-13eca780></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-13eca780>vuePress-theme-reco</a></span> <span data-v-13eca780><i class="iconfont reco-copyright" data-v-13eca780></i> <a data-v-13eca780><span data-v-13eca780>jyxiaoka</span>
+            
+          <span data-v-13eca780>2019 - </span>
+          2020
+        </a></span></div></div> <div data-v-4698c43e><main class="page"><!----> <div class="page-title" style="display:none;"><h1>iOS开发-使用CocoaPods做依赖管理</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>jyxiaoka</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2016-10-05</span></i> <i class="iconfont reco-eye" data-v-484a899e><span id="/views/%E7%A7%BB%E5%8A%A8%E7%AB%AF/2016100501.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-484a899e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      iOS
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>每种语言都会有它相应的类库依赖管理工具，比如Java的ant、maven、gradle，Node.js的npm等。那么在开发iOS应用时，也会引用到很多第三方的开源类库，这时为了方便管理这些类库，提高我们的开发效率，我们就会使用到iOS的类库依赖管理工具——<code>CocoaPods</code>。</p> <h2 id="cocoapods简介"><a href="#cocoapods简介" class="header-anchor">#</a> CocoaPods简介</h2> <p>在开发iOS应用时，常常需要用到第三方开源类库，比如AFNetWorking、SDWebImage等，可能这些类库有依赖其他的类库，我们有需要把这些库下载下来再复制到项目中去，而有可能其他的类库又可能依赖其他的类库，这样就会造成无休止的去进行这些工作；另一个情况就是，这些依赖的类库有时候需要更新，那么就需要重新去下载，然后重新加到项目中去，非常繁琐。所以就需要一个工具帮你解决这些问题，这就是<code>CocoaPods</code>,iOS开发中的最常用最出名的类库管理工具。通过CocoaPods，一行命令就可以解决以上的两个问题。</p> <h2 id="cocoapods的安装"><a href="#cocoapods的安装" class="header-anchor">#</a> CocoaPods的安装</h2> <p>使用ruby来安装CocoaPods，Mac下都自带了ruby，查看是否安装了ruby，使用<code>ruby --version</code>,如果输出了ruby的版本就表示已经安装了ruby。使用ruby的gem命令即可下载安装CocoaPods：</p> <div class="language-ruby line-numbers-mode"><pre class="language-ruby"><code>$ sudo gem install cocoapods
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>结果，满怀信心期望的我，敲入了这行命令后，一直卡主不动了。原来在我大天朝，官方的ruby源被屏蔽了，也阻挡了cocoapods.org 😅。
+我们可以将官方的ruby源换成国内淘宝的源：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ gem sources --remove https://rubygems.org/
+# $ gem sources -a https://ruby.taobao.org/
+# taobao的源已不再维护，更改为：
+$ gem sources -a https://gems.ruby-china.com/
+//验证ruby源是并且仅是taobao源，输入命令：
+$ gem sources -l
+//在终端输出下面的文字就说明上面的命令执行成功了：
+*** CURRENT SOURCES ***
+
+https://ruby.taobao.org
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>再次输入命令：<code>sudo gem install cocoapods</code>后，以为这次应该可以了，但是事与愿违，抛出了一下的错误：</p> <blockquote><p>ERROR:  While executing gem ... (Gem::DependencyError)
+Unable to resolve dependencies: cocoapods requires cocoapods-core (= 1.1.1), cocoapods-downloader (&lt; 2.0, &gt;= 1.1.2), cocoapods-trunk (&lt; 2.0, &gt;= 1.1.1), xcodeproj (&lt; 2.0, &gt;= 1.3.3)</p></blockquote> <p>原来是因为依赖的环境版本过低需要更新，使用如下命令升级gem:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//升级gem
+$ sudo gem update --system
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>然后一连串的升级信息之后，提示RubyGems system software updated，gem就升级完毕了。在执行安装cocoapods就可以了。
+且慢，又出现了如下的错误，真是不省事啊。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ERROR:  While executing gem ... (Errno::EPERM)
+    Operation not permitted - /usr/bin/xcodeproj
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>原来是在osx10.11(OSX El Capitan)之后(我的是macOS 10.12了)，系统阻止了写入/usr/bin目录，而CocoaPods默认是安装到这个目录的。所以我们安装到指定的目录去，如安装到/usr/local/bin:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo gem install -n /usr/local/bin cocoapods
+$ pod setup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这次终于安装成功了。执行pod setup时会输出Setting up CocoaPods master repo会等比较久的时间。这步操作是CocoaPods在将它的信息下载到<code>~/.cocoapods</code>目录下。如果等太久，可以cd到那个目录，然后用<code>du -sh *</code>来查看下载进度。也可以使用CocoaPods的镜像索引来提供下载速度。安装成功后,你会看到:Setup completed。
+下载速度过慢会导致下载失败，提示如下信息：</p> <blockquote><p>[!] /usr/bin/git clone https://github.com/CocoaPods/Specs.git master
+Cloning into 'master'...
+fatal: unable to access 'https://github.com/CocoaPods/Specs.git/': SSLRead() return error -9806</p></blockquote> <p>所以使用国内的服务器gitcafe和oschina等的CocoaPods索引库的镜像，在执行索引更新操作时会快很多。如下，可以将CocoaPods设置成使用gitcafe镜像：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pod repo remove master
+pod repo add master https://gitcafe.com/akuamdev/Specs.git
+pod repo update
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>将上述路径替换成https://coding.net/u/CocoaPods/p/Specs/git 即可使用OSChina上的镜像。但是执行supdate时也不能成功，提示如下错误：</p> <blockquote><p>[!] To setup the master specs repo, please run pod setup.</p></blockquote> <p>所以只能是手动把索引库clone下来，</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git clone https://git.coding.net/CocoaPods/Specs.git ~/.cocoapods/repos/master
+pod setup //务必在手动下载代码后执行一次,执行后 Setup completed
+//setup失败时提示执行
+pod repo update --verbose
+//在执行
+pod install --verbose --no-repo-update //避免去更新了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>使用https clone时有可能不成功，建议在coding.net网站上设置ssh key,然后以ssh的方式去下载，这样会比较快，且较容易成功，我就是这样clone成功的。
+setup成功时提示：</p> <blockquote><p>CocoaPods 1.2.0.beta.1 is available.
+To update use: <code>sudo gem install cocoapods --pre</code>
+[!] This is a test version we'd love you to try.
+For more information, see https://blog.cocoapods.org and the CHANGELOG for this version at https://github.com/CocoaPods/CocoaPods/releases/tag/1.2.0.beta.1
+Setup completed</p></blockquote> <p>有时候我们使用pod setup可能会出现失败，这时可使用下面的方法：</p> <blockquote><p>1.访问 https://github.com/CocoaPods/Specs，然后将Specs项目fork到自己的github账户上</p></blockquote> <ol start="2"><li>下载GitHub Desktop, 然后clone Specs项目。</li> <li>将clone的Specs项目的文件夹改名为master，然后拖到/Users/用户名/.cocoapods/repos目录下。</li> <li>运行pod setup</li></ol> <p>解释：pod setup的本质就是将https://github.com/CocoaPods/Specs上 的Specs项目clone到/Users/用户名/.cocoapods/repos目录下。若此目录下已有Specs项目，则会将项目更新到最新的状态。由于Specs很大，容易导致pod setup失败。这时就需要我们手动安装Specs。若直接从github上下载zip文件，由于缺少git文件，会导致cocoa pods不使用。若用git clone，由于文件过大，容易导致失败。但是使用GitHub Desktop软件，则会提高clone的成功率，并且会给出clone的进度。</p> <h2 id="cocapods的使用"><a href="#cocapods的使用" class="header-anchor">#</a> CocaPods的使用</h2> <p>使用时，需要新建一个名为<code>Podfile</code>(固定名字，无后缀)的文件，也可以进入到项目根目录下，使用<code>pod init</code>命令来生一个Podfile文件,然后编辑文件，使用vim或者其他编辑工具都行，Podfile文件的格式如下所示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>platform:ios,'9.0'  #不写9.0，则默认是最新的系统版本
+pod 'JSONKit','~&gt;1.4' #1.4为版本号，不写默认最新版本
+pod 'Reachability', '~&gt;3.0.0'
+pod 'ASIHTTPRequest'
+pod 'AFNetworking','~&gt;2.5.3'
+pod 'SDWwebImage', '~&gt;3.7.2'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>格式形如：<code>pod '第三库名称' '版本号'</code>，第三类库的名称一定要写正确，不然有可能安装失败。版本号标识的区别如下：</p> <blockquote></blockquote> <p>(&gt;=) 1.0 至少版本为1.0
+~&gt; 1.0 兼容1.0版本的最新版
+== 1.0或1.0 都表示指定版本</p> <p>编辑好需要的类库信息后，将文件放到项目的根目录，然后cd进到工程根目录，执行如下命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd &quot;你的工程根目录&quot;
+pod install
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>之后出现<code>pods installed</code>的提示就表示所有第三方库都已经下载完并设置好了编译参数和依赖。
+以前我们的工程不是CocoaPods工程时，是通过<code>*xcodeproj</code>文件来打开工程的，但使用CocoaPods后会生成一个名为<code>*xcworkspace</code>文件，我们需要使用这个文件来打开工程了。
+当以后我们每次更新了Podfile文件后，都需要重新执行一次<code>pod update</code>命令。</p> <h3 id="查找第三方库"><a href="#查找第三方库" class="header-anchor">#</a> 查找第三方库</h3> <p>可以通过命令<code>pod search</code>来在CocoaPods管理的库中查找有没有自己想要的库：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//如 查找json相关的可用的库
+$ pod search json
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>会显示出相关可用的库：</p> <blockquote><p>-&gt; JSON (5.0.0)
+JSON made so simple, it hurts
+pod 'JSON', '~&gt; 5.0.0'</p></blockquote> <ul><li>Homepage: https://github.com/3lvis/JSON</li> <li>Source:   https://github.com/3lvis/JSON.git</li> <li>Versions: 5.0.0, 5.0.0-beta1, 4.0.2, 4.0.1, 4.0.0, 3.1.0, 3.0.0, 2.1.1,
+2.1.0, 2.0.0 [master repo]
+-&gt; json-parser-swift (0.2.0)
+JSON parser &amp; tokenizer in pure Swift
+pod 'json-parser-swift', '~&gt; 0.2.0'</li> <li>Homepage: https://github.com/webconnex/json-parser-swift</li> <li>Source:   https://github.com/webconnex/json-parser-swift.git</li> <li>Versions: 0.2.0, 0.1.1, 0.1.0, 0.0.2, 0.0.1 [master repo]</li></ul> <h3 id="gitignore的使用"><a href="#gitignore的使用" class="header-anchor">#</a> .gitignore的使用</h3> <p>我们都知道，每个git项目都会有个<code>.gitignore</code>文件，它的作用是告诉Git哪些文件是不需要添加到版本管理中的，也就是在本地库中有，但是push时不会上传到github库中。使用规则如下所示：</p> <ol><li>/testDir/  过滤掉整个文件夹</li> <li>*.zip  过滤掉所有的.zip文件</li> <li>/testDir/test.c   过滤掉某个具体的文件</li></ol> <p>能过滤掉某些文件，也可以指定某些文件添加到版本管理中，如：</p> <ol><li>！/testDir/test.txt</li> <li>!*.zip</li></ol> <p>就是开头多了一个感叹号，Git会将满足这类规则的文件添加到版本管理中。需要注意的是，要在项目开始时就创建.gitignore文件，否则如果在创建.gitignore之前就push了项目，那么在.gitignore中过滤规则将不会起作用，Git让然会对所有类型的文件进行版本管理。
+言归正传，在执行了命令pod install后，会生成<code>Podfile</code>文件，同时CocoaPods还会生成一个名为<code>Podfile.lock</code>的文件，不要把这个文件加入到.gitignore中，因为Podfile.lock会锁定当前各依赖库的版本，之后执行多次都不会更改版本，只有执行pod update才会改变Podfile.lock。这样可以防止在第三方库升级时造成团队成员各自的第三方库版本不一致。所以需要总是把Podfile.lock加入版本管理中。</p> <h3 id="为自己的项目创建podspec文件"><a href="#为自己的项目创建podspec文件" class="header-anchor">#</a> 为自己的项目创建podspec文件</h3> <p>我们可以为自己编写的开源项目创建podspec文件，使用一下命令来初始化一个podspec文件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ pod spec create my_podspec_name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>执行改命令后，CocoaPods将会在本目录生成一个名为my_podspec_name.podspec文件。可以使用编辑器打开该文件，可以看到里面已经有很详细的说明文档。</p> <h3 id="不更新podspec"><a href="#不更新podspec" class="header-anchor">#</a> 不更新podspec</h3> <p>CocoaPods执行pod install和pod update会默认先更新一次podspec索引。可以使用一下参数来禁止索引更新操作：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>pod install --no-repo-update
+pod update --no-repo-update
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>更新：
+后来使用pod repo update 或 pod repo update --verbose更新时，速度很慢，等了很久后会出现错误。</p> <h3 id="生成第三方库的帮助文档"><a href="#生成第三方库的帮助文档" class="header-anchor">#</a> 生成第三方库的帮助文档</h3> <p>可以借助<code>appledoc</code>来生成第三方库的帮助文档，并集成到Xcode中。类似Java的javadoc,可以为我们生成OC代码注释，并且风格和苹果类库的api文档保存一致。
+首先如果没有安装appledoc，使用brew可以安装，执行下面的命令即可：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ brew install appledoc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>执行以上命令时会遇到问题：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> /usr/local is not writable. You should change the
+ownership and permissions of /usr/local back to your
+user account:
+  sudo chown -R $(whoami) /usr/local
+fatal: could not create leading directories of '/usr/local/Library/Taps/homebrew/homebrew-core': Permission denied
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>使用一下命令</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ sudo chown -R $(whoami) /usr/local
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后再执行安装命令。但执行再执行brew install appledoc就可以了。如果需要update homebrew就执行命令<code>brew update</code>，最后提示Already up-to-date.就更新成功了。
+也可以从github上下载安装：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ git clone git@github.com:tomaz/appledoc.git
+$ cd ./appledoc
+$ sudo sh install-apple.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>使用命令<code>appledoc --version</code>来验证是否已经成功安装了appledoc。
+使用时切换目录到iOS工程目录下，然后使用一下操作：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>appledoc -o &lt;output-path&gt; --project-name &lt;paoject-name&gt; --project-company &lt;project-company&gt;
+//输出的目录、项目名称、公司名称。
+可以使用 appledoc --help来查看更多使用参数。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="cocoapods的原理"><a href="#cocoapods的原理" class="header-anchor">#</a> CocoaPods的原理</h2> <p>CocoaPods的原理是将所有的第三方依赖库都已target的方式放到一个名为Pods的项目中去，让我们的工程以阿里这个Pods项目，这样，主项目就不需要一个个去管理这些依赖库了，都交由CocoaPods去管理。Pods项目最后会编译生成一个<code>libPods.a</code>的静态库文件，提供给我们的主项目使用，主项目只需依赖这个.a文件即可。
+对于资源文件，CocoaPods提供一个名为<code>Pods-resources.sh</code>的bash脚本，该脚本项目编译的时候都会执行，将第三方库的各种资源文件复制到目标目录中。
+CocoaPods通过一个名为<code>Pods.xcconfig</code>文件来在编译时设置所有的依赖和参数。
+原来的工程设置已经被更改，这是我们不能通过直接打开原本的工程文件去编译，只能通过新生成的xcworkspace来进行项目的管理。</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----> <div class="comments-wrapper" data-v-4698c43e><div class="valine-wrapper"><div id="valine"></div></div></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div></div></div>
+    <script src="/assets/js/app.47e4b453.js" defer></script><script src="/assets/js/3.fee66f70.js" defer></script><script src="/assets/js/1.2e349676.js" defer></script><script src="/assets/js/22.77c14c77.js" defer></script>
+  </body>
+</html>
